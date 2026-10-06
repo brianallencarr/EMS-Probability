@@ -1,0 +1,10 @@
+domain,source_issue,normalization,rule
+Unit aliases,MED10/MED60/MED20/M50/MED70 and engine spelling variants,Canonical Medic/Engine names,Original unit field preserved
+Zones,Legacy spelling/punctuation variants; duplicate 6-A and 1-B labels,"Canonical zone codes such as 1-A, 6-A, 10-SP",Original zone text preserved
+Gender,Male/Female plus several unknown/other legacy codes,"Male, Female, Other/Nonbinary, Unknown, Not applicable, Missing",No records discarded
+Age,Numeric ages 1–105,"Age plus bands 0–17, 18–34, 35–49, 50–64, 65–79, 80+",Missing ages retained as missing
+Dispatch complaint,47 source categories,19 analysis families,Original complaint preserved
+Provider impression,255 source descriptions,15 clinical families + Other/Missing,Original impression preserved
+Injury mechanism,214 source descriptions,15 mechanism families + Missing,Original injury text preserved
+Operational times,Raw timestamps,Validated minute intervals,Negative/extreme intervals excluded from derived duration only; raw timestamps untouched
+Incident identity,Repeated incident numbers may represent multi-unit/multi-patient activity,incident_key = incident number + date,"All 14,501 rows retained; event-level analysis uses incident_key"
